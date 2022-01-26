@@ -25,3 +25,5 @@ int tirerNombreMystere(int nbMin, int nbMax);
 // Valeur de retour : 0 si la partie est perdue, 1 sinon
 
 // Ajouter la DECLARATION de la fonction
+
+int jouerPartie(int nb, int nbMin, int nbMax, int tryMax, int *nbtry);

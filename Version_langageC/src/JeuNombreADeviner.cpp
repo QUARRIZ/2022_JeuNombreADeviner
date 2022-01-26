@@ -15,7 +15,8 @@
 #include <ctime>
 #include "../include/JeuNombreAdeviner.h"
 
-
+int nbj=0;
+int *nbtry=0
 
 // Nom :tirerNombreMystere
 // Rôle : Tire aléatoirement un nombre à deviner entre nbMin et nbMAx
@@ -46,9 +47,42 @@ int tirerNombreMystere(int nbMin, int nbMax)
 
 // Ajouter le CODE de  la fonction
 
+int jouerPartie(int nb, int nbMin, int nbMax, int tryMax, int *nbtry)
+{
+    printf("Saisir un nombre entre 0 et 10 \n");
+    scanf("%d",&nbj);
 
+    while((nbj!=nb) || (*nbtry!=tryMax))
+    {
+        if(nb<nbj)
+        {
+        printf("faux la valeur est plus petite\n");
+        printf("Saisir un nouveau nombre\n";
+        scanf("%d",&nbj);
+        }
 
+        if(nb>nbj)
+        {
+        printf("faux la valeur est plus grande\n");
+        printf("Saisir un nouveau nombre\n");
+        scanf("%d",&nbj);
+        }
 
+         nbtry=nbtry+1;
+
+    }
+
+    if (*nbtry==tryMax)
+    {
+        printf("Dommage vous avez perdu\n");
+    }
+
+    else
+    {
+        printf("Bravo vous avez gagné\n");
+    }
+    return *nbtry;
+}
 
 
 

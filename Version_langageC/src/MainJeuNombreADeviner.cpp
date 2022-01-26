@@ -17,24 +17,21 @@
 
 int main()
 {
+    int nb=0;
+    int nbtry=0;
 
 
     printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
 
-
-
-    // Tirer aléatoirement le nombre à deviner
-
-
-    // Jouer une partie
-
+    nb=tirerNombreMystere(0, 10); // Tirer aléatoirement le nombre à deviner
 
     printf("La partie commence.\n");
 
     printf("Vous avez 4 essais pour deviner le nombre myst\x8Are compris entre 0 et 10\n");
 
+    jouerPartie(nb,0,10,4,&nbtry); // Jouer une partie
 
-    // Affichage du résultat de la partie
+    printf("le nombre d'essaie est de: %d",nbtry);// Affichage du résultat de la partie
 
 
     return 0;
